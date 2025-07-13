@@ -28,10 +28,7 @@ rm -rf seiscomp
 cd $HOME
 
 sudo dnf install firefox -y
-sudo dnf install vim -y
-sudo dnf install kitty -y
-sudo dnf install gedit -y
-sudo dnf install nautilus -y
+sudo dnf install python3-pip -y
 
 echo "export PS1='$USER@dardanos:~$ '" >> .bashrc
 
