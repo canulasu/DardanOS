@@ -13,8 +13,17 @@ sudo dnf install hicolor-icon-theme -y
 
 sudo dnf install curl -y
 
-cd /usr/bin
-sudo curl -o seiscomp https://www.seiscomp.de/downloader/seiscomp-6.7.9-fedora42-x86_64.tar.gz
+curl -o seiscomp https://www.seiscomp.de/downloader/seiscomp-6.7.9-fedora42-x86_64.tar.gz
+tar -xf seiscomp
+cd seiscomp
+mv bin/* /usr/bin
+mv etc/* /usr/etc
+mv include/* /usr/include
+mv lib/* /usr/lib
+mv sbin/* /usr/sbin
+mv share/* /usr/share
+cd ..
+rm -rf seiscomp
 
 cd $HOME
 
