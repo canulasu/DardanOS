@@ -24,5 +24,7 @@ sudo dnf install kitty -y
 sudo dnf install gedit -y
 sudo dnf install nautilus -y
 
+echo "export PS1='$USER@dardanos:~$ '" >> .bashrc
+
 sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
