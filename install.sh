@@ -18,5 +18,11 @@ sudo curl -o seiscomp https://www.seiscomp.de/downloader/seiscomp-6.7.9-fedora42
 
 cd $HOME
 
+sudo dnf install firefox -y
+sudo dnf install vim -y
+sudo dnf install kitty -y
+sudo dnf install gedit -y
+sudo dnf install nautilus -y
+
 sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
