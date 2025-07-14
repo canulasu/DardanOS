@@ -16,12 +16,12 @@ sudo dnf install curl -y
 curl -o seiscomp https://www.seiscomp.de/downloader/seiscomp-6.7.9-fedora42-x86_64.tar.gz
 tar -xf seiscomp
 cd seiscomp
-mv bin/* /usr/bin
-mv etc/* /usr/etc
-mv include/* /usr/include
-mv lib/* /usr/lib
-mv sbin/* /usr/sbin
-mv share/* /usr/share
+sudo mv bin/* /usr/bin
+sudo mv etc/* /usr/etc
+sudo mv include/* /usr/include
+sudo mv lib/* /usr/lib
+sudo mv sbin/* /usr/sbin
+sudo mv share/* /usr/share
 cd ..
 rm -rf seiscomp
 
