@@ -3,7 +3,7 @@
 set -e
 
 sudo dnf update -y
-sudo dnf install gdm -y
+sudo dnf install lightdm -y
 
 sudo dnf install openbox -y
 sudo dnf install xfce4-panel -y
@@ -19,5 +19,5 @@ EOF
 
 cd $HOME
 
-sudo systemctl enable gdm
+sudo systemctl enable lightdm
 sudo systemctl set-default graphical.target
