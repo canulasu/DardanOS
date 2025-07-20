@@ -6,15 +6,14 @@ sudo dnf update -y
 sudo dnf install lightdm -y
 
 sudo dnf install openbox -y
-sudo dnf install xfce4-panel -y
-sudo dnf install xfce4-appfinder -y
+sudo dnf install lxpanel -y
 
 mkdir -p $HOME/.config/openbox
 cd $HOME/.config/openbox
 touch autostart
 cat > autostart <<EOF
 #!/bin/bash
-xfce4-panel &
+lxpanel &
 EOF
 
 cd $HOME
