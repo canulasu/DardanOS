@@ -20,3 +20,5 @@ cd $HOME
 
 sudo systemctl enable lightdm
 sudo systemctl set-default graphical.target
+
+sudo dnf install konsole -y
