@@ -6,19 +6,22 @@ sudo dnf update -y
 sudo dnf install lightdm -y
 
 sudo dnf install openbox -y
-sudo dnf install lxpanel -y
+sudo dnf install @lxqt-desktop -y
+sudo dnf install moka-icon-theme -y
 
-mkdir -p $HOME/.config/openbox
-cd $HOME/.config/openbox
-touch autostart
-cat > autostart <<EOF
-#!/bin/bash
-lxpanel &
-EOF
+mkdir -p $HOME/.config/lxqt
+cd $HOME/.config/lxqt
+touch session.conf
+
+if grep -q '^icon_theme=' session.conf; then
+  sed -i 's/^icon_theme=.*/icon_theme=Moka/' session.conf
+else
+  echo "icon_theme=Moka" >> session.conf
+fi
 
 cd $HOME
 
 sudo systemctl enable lightdm
 sudo systemctl set-default graphical.target
 
-sudo dnf install konsole -y
+sudo dnf install alacritty -y
