@@ -34,7 +34,7 @@ cat << EOF > icons.desktop
 Type=Application
 Name=Icons
 Comment=Start icons
-Exec=gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+Exec=gsettings set org.gnome.desktop.interface icon-theme 'Numix-Circle'
 Icon=gnome-shell
 Terminal=false
 X-GNOME-Autostart-enabled=true
